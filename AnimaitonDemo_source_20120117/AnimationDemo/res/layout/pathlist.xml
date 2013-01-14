@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <com.paran.animation.demo.app.animation.FastScrollView
+		android:id="@+id/listContainer"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:background="#ffffff"
+		android:visibility="visible">
+            <ListView 
+                android:id="@+id/list"
+                android:layout_width="fill_parent" 
+                android:layout_height="fill_parent"
+                android:cacheColorHint="#ffffff"
+                android:drawSelectorOnTop="false"/>
+            <RelativeLayout 
+		        android:id="@+id/thumb"
+		        android:layout_width="120px"
+		        android:layout_height="40px"
+		        android:background="@drawable/back2"
+		        android:layout_marginTop="3px"
+		        android:layout_marginBottom="7px"
+		        android:layout_gravity="right"
+		        android:visibility="gone">
+		        <com.paran.animation.demo.app.animation.AnalogClock
+		            xmlns:analogclock="http://schemas.android.com/apk/res/com.paran.animation.demo.app"
+		            android:id="@+id/clock"
+			        android:layout_width="35px"
+			        android:layout_height="35px"
+			        android:layout_centerVertical="true"
+			        android:layout_marginLeft="1px"
+			        android:layout_marginBottom="10px"
+			        analogclock:hand_hour="@drawable/widgethour"
+			        analogclock:hand_minute="@drawable/widgetminute">
+			    </com.paran.animation.demo.app.animation.AnalogClock>
+			    <TextView
+			        android:id="@+id/text"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_toRightOf="@+id/clock"
+			        android:layout_centerVertical="true"
+			        android:layout_marginLeft="3px"
+			        android:layout_marginBottom="10px"
+			        android:textColor="#ffffff"
+			        android:textSize="13px"
+			        android:textStyle="bold"
+			        android:text="오후 12:00">	        
+			    </TextView>
+		    </RelativeLayout>
+	</com.paran.animation.demo.app.animation.FastScrollView>
+</LinearLayout>
